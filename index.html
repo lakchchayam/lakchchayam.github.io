@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakchchayam Divya Khare - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        /* Slideshow Section */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Fade Effect */
+        @keyframes fadeEffect {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade {
+            animation: fadeEffect 1.5s ease-in-out;
+        }
+
+        /* Education, Experience, Skills, Projects, Achievements Sections */
+        .section {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Lakshyam Divya Khare</h1>
+    <p>Software Engineer | Research Graduate | Western University Alumni</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About</h2>
+            <p>I am a Software Engineer and Research Graduate with experience in various technical domains. I graduated from Western University, where I received a prestigious $50,000 scholarship. Additionally, I was awarded the Mitacs Globalink Research Internship. My journey has been filled with academic achievements and memorable experiences that have shaped my career path.</p>
+            <p>Beyond my academic life, I've worked on numerous projects and have been passionate about technology and innovation. I aim to leverage my skills in software engineering to make a positive impact in the tech industry.</p>
+        </div>
+        <div class="about-image">
+            <img src="image.jpeg" alt="Lakchchayam Divya Khare">
+        </div>
+    </div>
+</section>
+
+<!-- Slideshow Section -->
+<section class="slideshow">
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="image.png" alt="Scholarship Newspaper Article">
+            <div class="caption">Scholarship - $50,000 at Western University</div>
+        </div>
+        <div class="slides fade">
+            <img src="image2.png" alt="Mitacs GRI Award">
+            <div class="caption">Mitacs Globalink Research Internship Award</div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="education-section">
+    <div class="container">
+        <div class="education-content">
+            <div class="education-text">
+                <h2>Education</h2>
+                <p class="degree">Master of Science in Computer Science,(Research Based) Western University (2022 - 2024)</p>
+                <p class="description">
+                    During my time at Western University, I focused on topics such as Data Management, Machine Learning, Network Security, and Database Design. I was awarded a prestigious $50,000 scholarship for my academic achievements and was involved in a variety of research projects, including a Mitacs Globalink Research Internship.
+                </p>
+                <a href="https://ir.lib.uwo.ca/etd/10462/" target="_blank" class="thesis-btn">View Thesis</a>
+            </div>
+            <div class="education-image">
+                <img src="whats.png" alt="Lakchchayam Divya Khare" class="education-photo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Education Section Styles */
+    .education-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .education-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .education-text {
+        flex: 1;
+        text-align: left;
+        max-width: 600px;
+    }
+
+    .education-text h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .degree {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #3498db;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .education-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .education-photo {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .thesis-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .thesis-btn:hover {
+        background-color: #2980b9;
+    }
+
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .education-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .education-text {
+            max-width: 100%;
+        }
+
+        .education-photo {
+            max-width: 250px;
+            margin-top: 20px;
+        }
+    }
+</style>
+
+<style>
+    .experience-section {
+        padding: 60px 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    .experience-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .experience-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .experience-card .job-info {
+        max-width: 70%;
+    }
+
+    .experience-card h3 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .experience-card .company {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .experience-card .duration {
+        font-size: 16px;
+        color: #888;
+        margin-top: 5px;
+    }
+
+    .experience-card p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+    }
+</style>
+
+<section id="experience" class="experience-section">
+    <div class="experience-container">
+        <h2 class="experience-title">Experience</h2>
+        
+
+        <div class="experience-card">
+            <div class="job-info">
+                <h3>Teaching Assistant</h3>
+                <p class="company">Western University (2022 - 2024)</p>
+                <p>Assisted in teaching undergraduate courses, held office hours, and graded assignments. Provided support to students in understanding complex concepts in computer science.</p>
+            </div>
+            <div class="duration">2022 - 2024</div>
+        </div>
+
+        <div class="experience-card">
+            <div class="job-info">
+                <h3>Research Assistant</h3>
+                <p class="company">Western University (2022 - 2024)</p>
+                <p>My thesis explored Business Intelligence (BI) tools with a focus on security challenges, using Instacart's platform as a case study. The research aimed to strengthen data insights while addressing vulnerabilities specific to BI applications.</p>
+            </div>
+            <div class="duration">2022 - 2024</div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .skills-section {
+        padding: 60px 20px;
+        background-color: #f4f4f9;
+        text-align: center;
+    }
+
+    .skills-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .skills-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .skills-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .skill-category {
+        width: 45%;
+        text-align: left;
+    }
+
+    .skill-category h3 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    .skill-bar {
+        margin-bottom: 15px;
+    }
+
+    .skill-name {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .progress-bar {
+        background-color: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 10px;
+        position: relative;
+    }
+
+    .progress-bar .progress {
+        height: 100%;
+        background-color: #3498db;
+        border-radius: 5px;
+    }
+</style>
+
+<section id="skills" class="skills-section">
+    <div class="skills-container">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-wrapper">
+            <!-- Technical Skills -->
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                
+                <div class="skill-bar">
+                    <p class="skill-name">Python</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">JavaScript</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">NLP</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">Machine Learning</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+
+                <div class="skill-bar">
+                    <p class="skill-name">Teamwork</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">Communication</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">Problem Solving</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <p class="skill-name">Time Management</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .projects-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .projects-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background-color: #f4f4f9;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: left;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-title {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .project-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .project-links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .project-link {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-link:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+<section id="projects" class="projects-section">
+    <div class="projects-container">
+        <h2 class="projects-title">Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <h3 class="project-title">Project 1: LLM Fine-Tuning Project</h3>
+                <p class="project-description">Developed an automated pipeline for preprocessing and enhancing large-scale text data for NLP applications, focusing on
+                    optimizing data quality for language model training.</p>
+                <div class="project-links">
+                    <a href="https://github.com/lakchchayam?tab=repositories" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <h3 class="project-title">Project 2 : Churn Prediction Model for a Subscription Service</h3>
+                <p class="project-description">Developed a predictive model using Python to identify customers at high risk of cancelling their subscriptions based on user
+                    subscription history, activity logs, and customer service interactions.</p>
+                <div class="project-links">
+                    <a href="https://github.com/lakchchayam?tab=repositories" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+
+    
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .achievements-section {
+        padding: 60px 20px;
+        background-color: #f9f9fc;
+        text-align: center;
+    }
+
+    .achievements-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .achievements-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .achievement-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: left;
+    }
+
+    .achievement-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .achievement-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .achievement-date {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 15px;
+    }
+
+    .achievement-description {
+        font-size: 16px;
+        color: #666;
+    }
+</style>
+
+<section id="achievements" class="achievements-section">
+    <div class="achievements-container">
+        <h2 class="achievements-title">Achievements</h2>
+        <div class="achievements-grid">
+            <!-- Achievement Card 1 -->
+            <div class="achievement-card">
+                <h3 class="achievement-title">Scholarship Award</h3>
+                <p class="achievement-date">2024</p>
+                <p class="achievement-description">Awarded a $50,000 scholarship for outstanding academic performance at Western University.</p>
+            </div>
+
+            <!-- Achievement Card 2 -->
+            <div class="achievement-card">
+                <h3 class="achievement-title">Mitacs Globalink Research Internship</h3>
+                <p class="achievement-date">2023</p>
+                <p class="achievement-description">Selected for the Mitacs Globalink Research Internship, working on cutting-edge research in computer science.</p>
+            </div>
+
+            <!-- Achievement Card 3 -->
+            <div class="achievement-card">
+                <h3 class="achievement-title">Published Research</h3>
+                <p class="achievement-date">2023</p>
+                <p class="achievement-description">Published multiple research papers in top-tier conferences, contributing to advancements in machine learning and AI.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="section-content">
+        <p>Email: lakchchayam.khare@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/lakchchayam/">LinkedIn Profile</a></p>
+    </div>
+</section>
+
+<!-- JavaScript for Slideshow -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+</script>
+
+</body>
+</html>

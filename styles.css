@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 10px 0;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Full-Width Slideshow Section */
+.slideshow {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #e0e0e0;
+}
+
+.slideshow-container.fullwidth {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Display the first slide by default */
+.slideshow-container.fullwidth .slide:first-child {
+    display: block;
+}
+
+/* Fixed-Size Slideshow Tab */
+.slideshow-container.fixed-size {
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.slideshow-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slideshow 2s infinite linear;
+}
+
+.slideshow-images img {
+    width: 200px; /* Match container width */
+    height: 150px; /* Match container height */
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
