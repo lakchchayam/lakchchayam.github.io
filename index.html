@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lakchchayam Divya Khare - Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
 /* --- Reset & Basic --- */
 * {margin:0;padding:0;box-sizing:border-box;}
@@ -18,7 +19,7 @@ header {
 }
 header .nav-links a {margin:0 15px; font-weight:bold; cursor:pointer; transition:0.3s;}
 header .nav-links a:hover {color:#3498db;}
-#darkModeToggle {cursor:pointer; padding:6px 12px; border:1px solid #000; border-radius:5px; transition:0.3s;}
+#darkModeToggle {cursor:pointer; padding:6px 12px; border:1px solid #000; border-radius:5px; transition:0.3s; background:none;}
 #darkModeToggle:hover {background-color:#000; color:#fff;}
 
 /* --- Hero Section --- */
@@ -49,16 +50,15 @@ header .nav-links a:hover {color:#3498db;}
 .project-links a {background-color:#3498db; color:#fff; padding:8px 15px; border-radius:5px; margin-right:10px; font-size:0.9rem;}
 .project-links a:hover {background-color:#2980b9;}
 
-/* --- Skills Section --- */
+/* --- Skills Section (Modern Icon Cards) --- */
 .skills-section {padding:60px 20px; background-color:#fff; text-align:center;}
 .skills-title {font-size:2.5rem; margin-bottom:40px;}
-.skills-wrapper {display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;}
-.skill-category {flex:1; min-width:250px;}
-.skill-category h3 {font-size:1.5rem; margin-bottom:20px;}
-.skill-bar {margin-bottom:15px;}
-.skill-name {margin-bottom:5px; color:#555;}
-.progress-bar {background:#ddd; border-radius:5px; overflow:hidden; height:12px;}
-.progress-bar .progress {height:100%; background-color:#3498db;}
+.skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:20px;}
+.skill-card {background:#f4f4f9; border-radius:10px; padding:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:transform 0.3s;}
+.skill-card:hover {transform:translateY(-5px);}
+.skill-card i {font-size:2rem; margin-bottom:10px; color:#3498db;}
+.skill-name {font-weight:bold; font-size:1.1rem; color:#000;}
+.skill-level {font-size:0.9rem; color:#555; text-align:center; margin-top:5px;}
 
 /* --- Contact Section --- */
 .contact-section {padding:60px 20px; text-align:center; background-color:#f0f0f0;}
@@ -67,15 +67,18 @@ header .nav-links a:hover {color:#3498db;}
 .contact-section a:hover {color:#2980b9;}
 
 /* --- Dark Mode --- */
-body.dark-mode {background-color:#000; color:#fff;}
+body.dark-mode {background-color:#111; color:#fff;}
 body.dark-mode .hero {background-color:#111;}
 body.dark-mode .thesis-section {background-color:#111;}
 body.dark-mode .projects-section {background-color:#000;}
 body.dark-mode .skills-section {background-color:#111;}
 body.dark-mode .contact-section {background-color:#000;}
 body.dark-mode a {color:#3498db;}
+body.dark-mode .project-card {background-color:#1c1c1c; color:#fff;}
+body.dark-mode .skill-card {background-color:#1c1c1c; color:#fff;}
 body.dark-mode .thesis-btn {background-color:#fff; color:#000;}
 body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
+body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 
 /* --- Responsive --- */
 @media(max-width:768px){.hero{flex-direction:column; text-align:center;} .hero-text{padding-right:0;}}
@@ -92,7 +95,7 @@ body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </div>
-<div><button id="darkModeToggle">Dark Mode</button></div>
+<div><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></div>
 </header>
 
 <!-- Hero Section -->
@@ -109,7 +112,7 @@ body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
 <!-- Thesis / Education Section -->
 <section id="thesis" class="thesis-section">
 <h2>Education & Thesis</h2>
-<p class="thesis-description">Master of Science in Computer Science (Research-Based) at Western University, 2022-2024. My research focused on Business Intelligence tools, security challenges, and advanced ML techniques. Selected for the Mitacs Globalink Research Internship (fully funded). </p>
+<p class="thesis-description">Master of Science in Computer Science (Research-Based) at Western University, 2022-2024. My research focused on Business Intelligence tools, security challenges, and advanced ML techniques. Selected for the Mitacs Globalink Research Internship (fully funded).</p>
 <a href="https://ir.lib.uwo.ca/etd/10462/" target="_blank" class="thesis-btn">View Thesis</a>
 </section>
 
@@ -133,21 +136,13 @@ body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
 <!-- Skills Section -->
 <section id="skills" class="skills-section">
 <h2 class="skills-title">Skills</h2>
-<div class="skills-wrapper">
-<div class="skill-category">
-<h3>Technical Skills</h3>
-<div class="skill-bar"><p class="skill-name">Python</p><div class="progress-bar"><div class="progress" style="width:90%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">JavaScript</p><div class="progress-bar"><div class="progress" style="width:80%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">NLP</p><div class="progress-bar"><div class="progress" style="width:75%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Machine Learning</p><div class="progress-bar"><div class="progress" style="width:70%;"></div></div></div>
-</div>
-<div class="skill-category">
-<h3>Soft Skills</h3>
-<div class="skill-bar"><p class="skill-name">Teamwork</p><div class="progress-bar"><div class="progress" style="width:85%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Communication</p><div class="progress-bar"><div class="progress" style="width:90%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Problem Solving</p><div class="progress-bar"><div class="progress" style="width:80%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Time Management</p><div class="progress-bar"><div class="progress" style="width:75%;"></div></div></div>
-</div>
+<div class="skills-grid">
+<div class="skill-card"><i class="fab fa-python"></i><div class="skill-name">Python</div><div class="skill-level">Advanced</div></div>
+<div class="skill-card"><i class="fab fa-js-square"></i><div class="skill-name">JavaScript</div><div class="skill-level">Intermediate</div></div>
+<div class="skill-card"><i class="fas fa-robot"></i><div class="skill-name">Machine Learning</div><div class="skill-level">Intermediate</div></div>
+<div class="skill-card"><i class="fas fa-language"></i><div class="skill-name">NLP</div><div class="skill-level">Intermediate</div></div>
+<div class="skill-card"><i class="fas fa-users"></i><div class="skill-name">Teamwork</div><div class="skill-level">Advanced</div></div>
+<div class="skill-card"><i class="fas fa-comments"></i><div class="skill-name">Communication</div><div class="skill-level">Advanced</div></div>
 </div>
 </section>
 
