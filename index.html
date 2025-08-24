@@ -7,153 +7,35 @@
 <style>
 /* --- Reset & Basic --- */
 * {margin:0;padding:0;box-sizing:border-box;}
-body {font-family: Arial, sans-serif; background-color:#000; color:#fff; line-height:1.6;}
-a {text-decoration:none;}
+body {font-family: Arial, sans-serif; background-color:#fff; color:#000; line-height:1.6; transition: background 0.3s, color 0.3s;}
+a {text-decoration:none; color:inherit;}
 .container {max-width:1200px;margin:0 auto;padding:0 20px;}
 
-/* --- Header / Hero --- */
+/* --- Header --- */
 header {
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-    padding:50px 20px; background-color:#000;
+    position:sticky; top:0; z-index:1000; background-color:#fff; color:#000;
+    display:flex; justify-content:space-between; align-items:center; padding:15px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-header .hero-text {flex:1; min-width:300px;}
-header h1 {font-size:3rem; margin-bottom:10px; color:#fff;}
-header p {font-size:1.2rem; margin-bottom:20px; color:#ccc;}
-.header-buttons a {
-    display:inline-block; margin-right:15px; padding:12px 25px; border-radius:5px;
-    background-color:#fff; color:#000; font-weight:bold; transition:0.3s;
+header .nav-links a {margin:0 15px; font-weight:bold; cursor:pointer; transition:0.3s;}
+header .nav-links a:hover {color:#3498db;}
+#darkModeToggle {cursor:pointer; padding:6px 12px; border:1px solid #000; border-radius:5px; transition:0.3s;}
+#darkModeToggle:hover {background-color:#000; color:#fff;}
+
+/* --- Hero Section --- */
+.hero {
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:80px 20px; background-color:#f4f4f9;
 }
-.header-buttons a:hover {background-color:#3498db; color:#fff;}
-header .hero-image {flex:1; min-width:300px; text-align:center;}
-header .hero-image img {max-width:100%; border-radius:10px;}
+.hero-text {flex:1; min-width:300px; padding-right:20px;}
+.hero-text h1 {font-size:3rem; margin-bottom:20px;}
+.hero-text p {font-size:1.2rem; color:#333;}
+.hero-image {flex:1; min-width:300px; text-align:center;}
+.hero-image img {max-width:100%; border-radius:10px;}
 
-/* --- Achievements Slideshow --- */
-.slideshow-container {position:relative; max-width:100%; margin:50px auto;}
-.slides {display:none; width:100%; border-radius:8px;}
-.slides img {width:100%; border-radius:8px;}
-.caption {position:absolute; bottom:10px; left:20px; background:rgba(0,0,0,0.7);
-    color:#fff; padding:10px; font-size:1rem; border-radius:5px;}
-.fade {animation:fadeEffect 1.5s ease-in-out;}
-@keyframes fadeEffect {from{opacity:0;}to{opacity:1;}}
+/* --- Thesis Section --- */
+.thesis-section {padding:60px 20px; background-color:#fff; text-align:center;}
+.thesis-section h2 {font-size:2.5rem; margin-bottom:30px;}
+.thesis-description {max-width:800px; margin:0 auto 20px; font-size:1rem; color:#333;}
+.thesis-btn {display:inline-block; padding:10px 20px; background-color:#3498db; color:#fff; border-radius:5px; transition:0.3s;}
+.thesis-btn:hover {background-color:#2980b9;}
 
-/* --- Projects Section --- */
-.projects-section {padding:60px 20px; text-align:center; background-color:#111;}
-.projects-title {font-size:2.5rem; margin-bottom:40px; color:#fff;}
-.projects-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;}
-.project-card {background-color:#000; padding:20px; border-radius:10px;
-    box-shadow:0 4px 10px rgba(255,255,255,0.1); transition:transform 0.3s;}
-.project-card:hover {transform:translateY(-5px);}
-.project-title {font-size:1.5rem; color:#fff; margin-bottom:10px;}
-.project-description {color:#ccc; margin-bottom:15px;}
-.project-links a {background-color:#fff; color:#000; padding:8px 15px; border-radius:5px; margin-right:10px; font-size:0.9rem;}
-.project-links a:hover {background-color:#3498db; color:#fff;}
-
-/* --- Skills Section --- */
-.skills-section {padding:60px 20px; background-color:#000; text-align:center;}
-.skills-title {font-size:2.5rem; margin-bottom:40px;}
-.skills-wrapper {display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;}
-.skill-category {flex:1; min-width:250px;}
-.skill-category h3 {font-size:1.5rem; margin-bottom:20px;}
-.skill-bar {margin-bottom:15px;}
-.skill-name {margin-bottom:5px; color:#ccc;}
-.progress-bar {background:#333; border-radius:5px; overflow:hidden; height:12px;}
-.progress-bar .progress {height:100%; background-color:#fff;}
-
-/* --- Contact Section --- */
-.contact-section {padding:60px 20px; text-align:center; background-color:#111;}
-.contact-section h2 {font-size:2.5rem; margin-bottom:20px;}
-.contact-section a {color:#3498db; transition:0.3s;}
-.contact-section a:hover {color:#fff;}
-
-/* --- Responsive --- */
-@media(max-width:768px){header{flex-direction:column; text-align:center;} .header-buttons{margin-bottom:20px;} .skills-wrapper{flex-direction:column;}}
-
-</style>
-</head>
-<body>
-
-<!-- Hero Section -->
-<header>
-<div class="hero-text">
-<h1>Lakchchayam Divya Khare</h1>
-<p>Software Engineer | Research Graduate | Western University Alumni</p>
-<div class="header-buttons">
-<a href="#projects">View Projects</a>
-<a href="resume.pdf" target="_blank">Download Resume</a>
-</div>
-</div>
-<div class="hero-image">
-<img src="image.jpeg" alt="Graduation Picture">
-</div>
-</header>
-
-<!-- Achievements Slideshow -->
-<section class="slideshow">
-<div class="slideshow-container">
-<div class="slides fade"><img src="image.png" alt="Scholarship"><div class="caption">Scholarship - $50,000 at Western University</div></div>
-<div class="slides fade"><img src="image2.png" alt="Mitacs Award"><div class="caption">Mitacs Globalink Research Internship Award</div></div>
-<div class="slides fade"><img src="image3.png" alt="Published Research"><div class="caption">Published Research in ML & AI Conferences</div></div>
-</div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-<h2 class="projects-title">Projects</h2>
-<div class="projects-grid">
-<div class="project-card">
-<h3 class="project-title">LLM Fine-Tuning Project</h3>
-<p class="project-description">Automated pipeline for preprocessing & enhancing large-scale text data for NLP applications, optimizing model training.</p>
-<div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
-</div>
-<div class="project-card">
-<h3 class="project-title">Churn Prediction Model</h3>
-<p class="project-description">Predictive model to identify customers likely to cancel subscriptions using Python & historical data analysis.</p>
-<div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
-</div>
-</div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-<h2 class="skills-title">Skills</h2>
-<div class="skills-wrapper">
-<div class="skill-category">
-<h3>Technical Skills</h3>
-<div class="skill-bar"><p class="skill-name">Python</p><div class="progress-bar"><div class="progress" style="width:90%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">JavaScript</p><div class="progress-bar"><div class="progress" style="width:80%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">NLP</p><div class="progress-bar"><div class="progress" style="width:75%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Machine Learning</p><div class="progress-bar"><div class="progress" style="width:70%;"></div></div></div>
-</div>
-<div class="skill-category">
-<h3>Soft Skills</h3>
-<div class="skill-bar"><p class="skill-name">Teamwork</p><div class="progress-bar"><div class="progress" style="width:85%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Communication</p><div class="progress-bar"><div class="progress" style="width:90%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Problem Solving</p><div class="progress-bar"><div class="progress" style="width:80%;"></div></div></div>
-<div class="skill-bar"><p class="skill-name">Time Management</p><div class="progress-bar"><div class="progress" style="width:75%;"></div></div></div>
-</div>
-</div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-<h2>Contact</h2>
-<p>Email: lakchchayam.khare@gmail.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/lakchchayam/" target="_blank">LinkedIn Profile</a></p>
-</section>
-
-<!-- Slideshow JS -->
-<script>
-let slideIndex = 0;
-showSlides();
-function showSlides(){
-let slides = document.getElementsByClassName("slides");
-for(let i=0;i<slides.length;i++){slides[i].style.display="none";}
-slideIndex++;
-if(slideIndex>slides.length){slideIndex=1;}
-slides[slideIndex-1].style.display="block";
-setTimeout(showSlides,3000);
-}
-</script>
-
-</body>
-</html>
+/* --- Projec*
