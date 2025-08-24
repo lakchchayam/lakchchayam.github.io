@@ -50,15 +50,8 @@ header .nav-links a:hover {color:#3498db;}
 .project-links a {background-color:#3498db; color:#fff; padding:8px 15px; border-radius:5px; margin-right:10px; font-size:0.9rem;}
 .project-links a:hover {background-color:#2980b9;}
 
-/* --- Skills Section (Modern Icon Cards) --- */
-.skills-section {padding:60px 20px; background-color:#fff; text-align:center;}
-.skills-title {font-size:2.5rem; margin-bottom:40px;}
-.skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:20px;}
-.skill-card {background:#f4f4f9; border-radius:10px; padding:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:transform 0.3s;}
-.skill-card:hover {transform:translateY(-5px);}
-.skill-card i {font-size:2rem; margin-bottom:10px; color:#3498db;}
-.skill-name {font-weight:bold; font-size:1.1rem; color:#000;}
-.skill-level {font-size:0.9rem; color:#555; text-align:center; margin-top:5px;}
+/* --- Skills Section (3D Globe) --- */
+#skills-globe {height:500px; background:#111; margin:60px 0; border-radius:10px;}
 
 /* --- Contact Section --- */
 .contact-section {padding:60px 20px; text-align:center; background-color:#f0f0f0;}
@@ -71,11 +64,10 @@ body.dark-mode {background-color:#111; color:#fff;}
 body.dark-mode .hero {background-color:#111;}
 body.dark-mode .thesis-section {background-color:#111;}
 body.dark-mode .projects-section {background-color:#000;}
-body.dark-mode .skills-section {background-color:#111;}
+body.dark-mode #skills-globe {background:#000;}
 body.dark-mode .contact-section {background-color:#000;}
 body.dark-mode a {color:#3498db;}
 body.dark-mode .project-card {background-color:#1c1c1c; color:#fff;}
-body.dark-mode .skill-card {background-color:#1c1c1c; color:#fff;}
 body.dark-mode .thesis-btn {background-color:#fff; color:#000;}
 body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
 body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
@@ -92,7 +84,7 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 <a href="#hero">About</a>
 <a href="#thesis">Education</a>
 <a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
+<a href="#skills-globe">Skills</a>
 <a href="#contact">Contact</a>
 </div>
 <div><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></div>
@@ -133,18 +125,8 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-<h2 class="skills-title">Skills</h2>
-<div class="skills-grid">
-<div class="skill-card"><i class="fab fa-python"></i><div class="skill-name">Python</div><div class="skill-level">Advanced</div></div>
-<div class="skill-card"><i class="fab fa-js-square"></i><div class="skill-name">JavaScript</div><div class="skill-level">Intermediate</div></div>
-<div class="skill-card"><i class="fas fa-robot"></i><div class="skill-name">Machine Learning</div><div class="skill-level">Intermediate</div></div>
-<div class="skill-card"><i class="fas fa-language"></i><div class="skill-name">NLP</div><div class="skill-level">Intermediate</div></div>
-<div class="skill-card"><i class="fas fa-users"></i><div class="skill-name">Teamwork</div><div class="skill-level">Advanced</div></div>
-<div class="skill-card"><i class="fas fa-comments"></i><div class="skill-name">Communication</div><div class="skill-level">Advanced</div></div>
-</div>
-</section>
+<!-- Skills Section with 3D Globe -->
+<section id="skills-globe"></section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
@@ -153,12 +135,63 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 <p>LinkedIn: <a href="https://www.linkedin.com/in/lakchchayam/" target="_blank">Profile</a></p>
 </section>
 
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
 // Dark Mode Toggle
 const toggle = document.getElementById('darkModeToggle');
 toggle.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
-</script>
 
+// 3D Skills Globe
+const container = document.getElementById('skills-globe');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x111111);
+const camera = new THREE.PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+camera.position.z = 50;
+
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(container.offsetWidth, container.offsetHeight);
+container.appendChild(renderer.domElement);
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; controls.dampingFactor = 0.05; controls.enablePan = false;
+
+// Globe
+const sphereGeometry = new THREE.SphereGeometry(15, 64, 64);
+const sphereMaterial = new THREE.MeshBasicMaterial({color:0x222222, wireframe:true});
+const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+scene.add(sphere);
+
+// Load font and add skills
+const loader = new THREE.FontLoader();
+loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function(font){
+    const skills = ['Python','ML','NLP','JavaScript','SQL','React','Teamwork','Communication'];
+    skills.forEach((skill, i)=>{
+        const angle = i * (Math.PI * 2 / skills.length);
+        const textGeo = new THREE.TextGeometry(skill, {font:font, size:2, height:0.3});
+        const textMaterial = new THREE.MeshBasicMaterial({color:0x3498db});
+        const textMesh = new THREE.Mesh(textGeo, textMaterial);
+        textMesh.position.x = Math.cos(angle)*17;
+        textMesh.position.y = Math.sin(angle)*10;
+        textMesh.lookAt(new THREE.Vector3(0,0,0));
+        scene.add(textMesh);
+    });
+});
+
+function animate(){
+    requestAnimationFrame(animate);
+    sphere.rotation.y += 0.001;
+    controls.update();
+    renderer.render(scene,camera);
+}
+animate();
+
+window.addEventListener('resize', ()=>{
+    camera.aspect = container.offsetWidth / container.offsetHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+});
+</script>
 </body>
 </html>
-
