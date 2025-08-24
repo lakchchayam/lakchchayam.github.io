@@ -6,40 +6,34 @@
 <title>Lakchchayam Divya Khare - Portfolio</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* --- Reset & Basic --- */
 * {margin:0;padding:0;box-sizing:border-box;}
 body {font-family: Arial, sans-serif; background-color:#fff; color:#000; line-height:1.6; transition: background 0.3s, color 0.3s;}
 a {text-decoration:none; color:inherit;}
 .container {max-width:1200px;margin:0 auto;padding:0 20px;}
 
-/* --- Header --- */
-header {
-    position:sticky; top:0; z-index:1000; background-color:#fff; color:#000;
-    display:flex; justify-content:space-between; align-items:center; padding:15px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
+/* Header */
+header {position:sticky; top:0; z-index:1000; background-color:#fff; color:#000; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
 header .nav-links a {margin:0 15px; font-weight:bold; cursor:pointer; transition:0.3s;}
 header .nav-links a:hover {color:#3498db;}
 #darkModeToggle {cursor:pointer; padding:6px 12px; border:1px solid #000; border-radius:5px; transition:0.3s; background:none;}
 #darkModeToggle:hover {background-color:#000; color:#fff;}
 
-/* --- Hero Section --- */
-.hero {
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:80px 20px; background-color:#f4f4f9;
-}
+/* Hero */
+.hero {display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:80px 20px; background-color:#f4f4f9;}
 .hero-text {flex:1; min-width:300px; padding-right:20px;}
 .hero-text h1 {font-size:3rem; margin-bottom:20px;}
 .hero-text p {font-size:1.2rem; color:#333;}
 .hero-image {flex:1; min-width:300px; text-align:center;}
 .hero-image img {max-width:100%; border-radius:10px;}
 
-/* --- Thesis Section --- */
+/* Thesis Section */
 .thesis-section {padding:60px 20px; background-color:#fff; text-align:center;}
 .thesis-section h2 {font-size:2.5rem; margin-bottom:30px;}
 .thesis-description {max-width:800px; margin:0 auto 20px; font-size:1rem; color:#333;}
 .thesis-btn {display:inline-block; padding:10px 20px; background-color:#3498db; color:#fff; border-radius:5px; transition:0.3s;}
 .thesis-btn:hover {background-color:#2980b9;}
 
-/* --- Projects Section --- */
+/* Projects */
 .projects-section {padding:60px 20px; background-color:#f0f0f0; text-align:center;}
 .projects-title {font-size:2.5rem; margin-bottom:40px;}
 .projects-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;}
@@ -50,21 +44,27 @@ header .nav-links a:hover {color:#3498db;}
 .project-links a {background-color:#3498db; color:#fff; padding:8px 15px; border-radius:5px; margin-right:10px; font-size:0.9rem;}
 .project-links a:hover {background-color:#2980b9;}
 
-/* --- Skills Section (3D Globe) --- */
-#skills-globe {height:500px; background:#111; margin:60px 0; border-radius:10px;}
+/* Skills Section with Pie Chart */
+#skills-chart {padding:60px 20px; background:#f4f4f9; text-align:center; border-radius:10px;}
 
-/* --- Contact Section --- */
+/* Portfolio Images */
+.slideshow-container {max-width:900px; margin:0 auto; position:relative; overflow:hidden; border-radius:10px;}
+.slides {display:none; position:relative;}
+.slides img {width:100%; border-radius:10px;}
+.caption {position:absolute;bottom:10px; left:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:0.9rem;}
+
+/* Contact Section */
 .contact-section {padding:60px 20px; text-align:center; background-color:#f0f0f0;}
 .contact-section h2 {font-size:2.5rem; margin-bottom:20px;}
 .contact-section a {color:#3498db;}
 .contact-section a:hover {color:#2980b9;}
 
-/* --- Dark Mode --- */
+/* Dark Mode */
 body.dark-mode {background-color:#111; color:#fff;}
 body.dark-mode .hero {background-color:#111;}
 body.dark-mode .thesis-section {background-color:#111;}
 body.dark-mode .projects-section {background-color:#000;}
-body.dark-mode #skills-globe {background:#000;}
+body.dark-mode #skills-chart {background:#000;}
 body.dark-mode .contact-section {background-color:#000;}
 body.dark-mode a {color:#3498db;}
 body.dark-mode .project-card {background-color:#1c1c1c; color:#fff;}
@@ -72,7 +72,7 @@ body.dark-mode .thesis-btn {background-color:#fff; color:#000;}
 body.dark-mode .thesis-btn:hover {background-color:#3498db; color:#fff;}
 body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 
-/* --- Responsive --- */
+/* Responsive */
 @media(max-width:768px){.hero{flex-direction:column; text-align:center;} .hero-text{padding-right:0;}}
 </style>
 </head>
@@ -84,7 +84,8 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 <a href="#hero">About</a>
 <a href="#thesis">Education</a>
 <a href="#projects">Projects</a>
-<a href="#skills-globe">Skills</a>
+<a href="#skills-chart">Skills</a>
+<a href="#portfolio-images">Portfolio</a>
 <a href="#contact">Contact</a>
 </div>
 <div><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></div>
@@ -125,8 +126,30 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 </div>
 </section>
 
-<!-- Skills Section with 3D Globe -->
-<section id="skills-globe"></section>
+<!-- Skills Section with Pie Chart -->
+<section id="skills-chart">
+<h2 style="font-size:2.5rem; margin-bottom:40px;">Skills</h2>
+<canvas id="skillsPie" style="max-width:600px; margin:0 auto;"></canvas>
+</section>
+
+<!-- Portfolio Images Section -->
+<section id="portfolio-images" style="padding:60px 20px; background:#fff; text-align:center;">
+<h2 style="font-size:2.5rem; margin-bottom:40px;">Portfolio Images</h2>
+<div class="slideshow-container">
+<div class="slides fade">
+<img src="image.jpeg" alt="Graduation Picture">
+<div class="caption">Graduation</div>
+</div>
+<div class="slides fade">
+<img src="image2.png" alt="Scholarship">
+<div class="caption">$50,000 Scholarship</div>
+</div>
+<div class="slides fade">
+<img src="image3.png" alt="Mitacs GRI">
+<div class="caption">Mitacs GRI</div>
+</div>
+</div>
+</section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
@@ -136,62 +159,39 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 </section>
 
 <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 // Dark Mode Toggle
 const toggle = document.getElementById('darkModeToggle');
 toggle.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
 
-// 3D Skills Globe
-const container = document.getElementById('skills-globe');
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x111111);
-const camera = new THREE.PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-camera.position.z = 50;
-
-const renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setSize(container.offsetWidth, container.offsetHeight);
-container.appendChild(renderer.domElement);
-
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true; controls.dampingFactor = 0.05; controls.enablePan = false;
-
-// Globe
-const sphereGeometry = new THREE.SphereGeometry(15, 64, 64);
-const sphereMaterial = new THREE.MeshBasicMaterial({color:0x222222, wireframe:true});
-const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-scene.add(sphere);
-
-// Load font and add skills
-const loader = new THREE.FontLoader();
-loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function(font){
-    const skills = ['Python','ML','NLP','JavaScript','SQL','React','Teamwork','Communication'];
-    skills.forEach((skill, i)=>{
-        const angle = i * (Math.PI * 2 / skills.length);
-        const textGeo = new THREE.TextGeometry(skill, {font:font, size:2, height:0.3});
-        const textMaterial = new THREE.MeshBasicMaterial({color:0x3498db});
-        const textMesh = new THREE.Mesh(textGeo, textMaterial);
-        textMesh.position.x = Math.cos(angle)*17;
-        textMesh.position.y = Math.sin(angle)*10;
-        textMesh.lookAt(new THREE.Vector3(0,0,0));
-        scene.add(textMesh);
-    });
+// Skills Pie Chart
+const ctx = document.getElementById('skillsPie').getContext('2d');
+const skillsPie = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Python','Machine Learning','NLP','JavaScript','Teamwork','Communication'],
+        datasets: [{
+            label: 'Skills',
+            data: [90,70,75,80,85,90],
+            backgroundColor:['#3498db','#2ecc71','#f1c40f','#e67e22','#9b59b6','#1abc9c']
+        }]
+    },
+    options: {responsive:true, plugins:{legend:{position:'bottom'}}}
 });
 
-function animate(){
-    requestAnimationFrame(animate);
-    sphere.rotation.y += 0.001;
-    controls.update();
-    renderer.render(scene,camera);
+// Slideshow Script
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+let slides = document.getElementsByClassName("slides");
+for (let i=0;i<slides.length;i++){slides[i].style.display="none";}
+slideIndex++;
+if(slideIndex>slides.length){slideIndex=1;}
+slides[slideIndex-1].style.display="block";
+setTimeout(showSlides,3000);
 }
-animate();
-
-window.addEventListener('resize', ()=>{
-    camera.aspect = container.offsetWidth / container.offsetHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-});
 </script>
+
 </body>
 </html>
