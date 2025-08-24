@@ -117,12 +117,76 @@ header .nav-links a:hover {color:#3498db;}
   .hero-image img { max-width: 280px; }
 }
 
-/* Thesis Section */
-.thesis-section {padding:60px 20px; background-color:#fff; text-align:center;}
-.thesis-section h2 {font-size:2.5rem; margin-bottom:30px;}
-.thesis-description {max-width:800px; margin:0 auto 20px; font-size:1rem; color:#333;}
-.thesis-btn {display:inline-block; padding:10px 20px; background-color:#3498db; color:#fff; border-radius:5px; transition:0.3s;}
-.thesis-btn:hover {background-color:#2980b9;}
+<!-- Thesis Section -->
+<section id="thesis" class="thesis-section">
+  <h2>Thesis</h2>
+  <div class="thesis-container">
+    <img src="hel.png" alt="Thesis Thumbnail" class="thesis-thumbnail" />
+    <div class="thesis-details">
+      <h3>Security in BI Tools</h3>
+      <p>
+        My research focuses on identifying and addressing security challenges in Business Intelligence (BI) tools.
+        The thesis explores vulnerabilities, evaluates authentication mechanisms, and proposes solutions for safer 
+        integration in organizational environments.
+      </p>
+      <a href="https://github.com/lakchchayam/Thesis-Western-University" target="_blank" class="btn">View Thesis</a>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.thesis-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.thesis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.thesis-thumbnail {
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.thesis-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thesis-details {
+  max-width: 600px;
+  text-align: left;
+}
+
+.thesis-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.thesis-details p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #6a0dad; /* Purple */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #4b0082;
+}
+</style>
 
 /* Projects */
 .projects-section {padding:60px 20px; background-color:#f0f0f0; text-align:center;}
