@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lakchchayam Divya Khare - Portfolio</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 <style>
 * {margin:0;padding:0;box-sizing:border-box;}
 body {font-family: Arial, sans-serif; background-color:#fff; color:#000; line-height:1.6; transition: background 0.3s, color 0.3s;}
@@ -18,7 +19,7 @@ header .nav-links a:hover {color:#3498db;}
 #darkModeToggle {cursor:pointer; padding:6px 12px; border:1px solid #000; border-radius:5px; transition:0.3s; background:none;}
 #darkModeToggle:hover {background-color:#000; color:#fff;}
 
-/* Hero Section (new integrated) */
+/* Hero Section */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -26,7 +27,6 @@ header .nav-links a:hover {color:#3498db;}
   background: linear-gradient(135deg, #f9f9f9, #ececec);
   padding: 60px 10%;
 }
-
 .hero-container {
   display: flex;
   justify-content: space-between;
@@ -35,81 +35,19 @@ header .nav-links a:hover {color:#3498db;}
   flex-wrap: wrap;
   width: 100%;
 }
-
-.hero-text {
-  flex: 1;
-  animation: fadeInLeft 1s ease;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.tagline {
-  font-size: 1.4rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.about {
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 500px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn, .btn-outline {
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn {
-  background: #111;
-  color: #fff;
-}
-
-.btn:hover {
-  background: #444;
-}
-
-.btn-outline {
-  border: 2px solid #111;
-  color: #111;
-}
-
-.btn-outline:hover {
-  background: #111;
-  color: #fff;
-}
-
-.hero-image img {
-  max-width: 380px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  animation: fadeInRight 1s ease;
-}
-
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
+.hero-text {flex: 1; animation: fadeInLeft 1s ease;}
+.hero-text h1 {font-size: 3rem; font-weight: 800; margin-bottom: 15px;}
+.tagline {font-size: 1.4rem; color: #666; margin-bottom: 20px;}
+.about {font-size: 1.1rem; color: #444; max-width: 500px; line-height: 1.6; margin-bottom: 30px;}
+.hero-buttons {display: flex; gap: 15px;}
+.btn, .btn-outline {padding: 12px 25px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.3s;}
+.btn {background: #111; color: #fff;}
+.btn:hover {background: #444;}
+.btn-outline {border: 2px solid #111; color: #111;}
+.btn-outline:hover {background: #111; color: #fff;}
+.hero-image img {max-width: 380px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.2); animation: fadeInRight 1s ease;}
+@keyframes fadeInLeft {from { opacity: 0; transform: translateX(-50px);} to { opacity: 1; transform: translateX(0);}}
+@keyframes fadeInRight {from { opacity: 0; transform: translateX(50px);} to { opacity: 1; transform: translateX(0);}}
 @media(max-width: 900px) {
   .hero-container { flex-direction: column; text-align: center; }
   .hero-text { order: 2; }
@@ -117,76 +55,16 @@ header .nav-links a:hover {color:#3498db;}
   .hero-image img { max-width: 280px; }
 }
 
-<!-- Thesis Section -->
-<section id="thesis" class="thesis-section">
-  <h2>Thesis</h2>
-  <div class="thesis-container">
-    <img src="hel.png" alt="Thesis Thumbnail" class="thesis-thumbnail" />
-    <div class="thesis-details">
-      <h3>Security in BI Tools</h3>
-      <p>
-        My research focuses on identifying and addressing security challenges in Business Intelligence (BI) tools.
-        The thesis explores vulnerabilities, evaluates authentication mechanisms, and proposes solutions for safer 
-        integration in organizational environments.
-      </p>
-      <a href="https://github.com/lakchchayam/Thesis-Western-University" target="_blank" class="btn">View Thesis</a>
-    </div>
-  </div>
-</section>
-
-<!-- CSS -->
-<style>
-.thesis-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.thesis-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.thesis-thumbnail {
-  max-width: 350px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-.thesis-thumbnail:hover {
-  transform: scale(1.05);
-}
-
-.thesis-details {
-  max-width: 600px;
-  text-align: left;
-}
-
-.thesis-details h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.thesis-details p {
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #6a0dad; /* Purple */
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #4b0082;
-}
-</style>
+/* Thesis Section */
+.thesis-section {padding: 60px 20px; text-align: center;}
+.thesis-container {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;}
+.thesis-thumbnail {max-width: 350px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease;}
+.thesis-thumbnail:hover {transform: scale(1.05);}
+.thesis-details {max-width: 600px; text-align: left;}
+.thesis-details h3 {font-size: 24px; margin-bottom: 10px;}
+.thesis-details p {font-size: 16px; margin-bottom: 15px;}
+.thesis-btn {display: inline-block; padding: 10px 18px; background: #6a0dad; color: white; border-radius: 8px; text-decoration: none; transition: background 0.3s ease;}
+.thesis-btn:hover {background: #4b0082;}
 
 /* Projects */
 .projects-section {padding:60px 20px; background-color:#f0f0f0; text-align:center;}
@@ -199,7 +77,7 @@ header .nav-links a:hover {color:#3498db;}
 .project-links a {background-color:#3498db; color:#fff; padding:8px 15px; border-radius:5px; margin-right:10px; font-size:0.9rem;}
 .project-links a:hover {background-color:#2980b9;}
 
-/* Skills Section with Pie Chart */
+/* Skills Section */
 #skills-chart {padding:60px 20px; background:#f4f4f9; text-align:center; border-radius:10px;}
 
 /* Portfolio Images */
@@ -208,7 +86,7 @@ header .nav-links a:hover {color:#3498db;}
 .slides img {width:100%; border-radius:10px;}
 .caption {position:absolute;bottom:10px; left:10px; background:rgba(0,0,0,0.5); color:#fff; padding:5px 10px; border-radius:5px; font-size:0.9rem;}
 
-/* Contact Section */
+/* Contact */
 .contact-section {padding:60px 20px; text-align:center; background-color:#f0f0f0;}
 .contact-section h2 {font-size:2.5rem; margin-bottom:20px;}
 .contact-section a {color:#3498db;}
@@ -232,18 +110,18 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
 
 <!-- Header -->
 <header>
-<div class="nav-links">
-<a href="#hero">About</a>
-<a href="#thesis">Education</a>
-<a href="#projects">Projects</a>
-<a href="#skills-chart">Skills</a>
-<a href="#portfolio-images">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
-<div><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></div>
+  <div class="nav-links">
+    <a href="#hero">About</a>
+    <a href="#thesis">Thesis</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills-chart">Skills</a>
+    <a href="#portfolio-images">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div><button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button></div>
 </header>
 
-<!-- Hero Section (new) -->
+<!-- Hero -->
 <section id="hero" class="hero-section">
   <div class="hero-container">
     <div class="hero-text">
@@ -267,60 +145,70 @@ body.dark-mode #darkModeToggle {border-color:#fff; color:#fff;}
   </div>
 </section>
 
-<!-- Thesis / Education Section -->
+<!-- Thesis -->
 <section id="thesis" class="thesis-section">
-<h2>Education & Thesis</h2>
-<p class="thesis-description">Master of Science in Computer Science (Research-Based) at Western University, 2022-2024. My research focused on Business Intelligence tools, security challenges, and advanced ML techniques. Selected for the Mitacs Globalink Research Internship (fully funded).</p>
-<a href="https://ir.lib.uwo.ca/etd/10462/" target="_blank" class="thesis-btn">View Thesis</a>
+  <h2>Thesis</h2>
+  <div class="thesis-container">
+    <img src="hel.png" alt="Thesis Thumbnail" class="thesis-thumbnail" />
+    <div class="thesis-details">
+      <h3>Security in BI Tools</h3>
+      <p>
+        My research focuses on identifying and addressing security challenges in Business Intelligence (BI) tools.
+        The thesis explores vulnerabilities, evaluates authentication mechanisms, and proposes solutions for safer 
+        integration in organizational environments.
+      </p>
+      <a href="https://github.com/lakchchayam/Thesis-Western-University" target="_blank" class="thesis-btn">View Thesis</a>
+    </div>
+  </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects -->
 <section id="projects" class="projects-section">
-<h2 class="projects-title">Projects</h2>
-<div class="projects-grid">
-<div class="project-card">
-<h3 class="project-title">LLM Fine-Tuning Project</h3>
-<p class="project-description">Automated pipeline for preprocessing & enhancing large-scale text data for NLP applications, optimizing model training.</p>
-<div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
-</div>
-<div class="project-card">
-<h3 class="project-title">Churn Prediction Model</h3>
-<p class="project-description">Predictive model to identify customers likely to cancel subscriptions using Python & historical data analysis.</p>
-<div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
-</div>
-</div>
+  <h2 class="projects-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3 class="project-title">LLM Fine-Tuning Project</h3>
+      <p class="project-description">Automated pipeline for preprocessing & enhancing large-scale text data for NLP applications, optimizing model training.</p>
+      <div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
+    </div>
+    <div class="project-card">
+      <h3 class="project-title">Churn Prediction Model</h3>
+      <p class="project-description">Predictive model to identify customers likely to cancel subscriptions using Python & historical data analysis.</p>
+      <div class="project-links"><a href="https://github.com/lakchchayam?tab=repositories" target="_blank">View Project</a></div>
+    </div>
+  </div>
 </section>
 
-<!-- Skills Section with Pie Chart -->
+<!-- Skills -->
 <section id="skills-chart">
-<h2 style="font-size:2.5rem; margin-bottom:40px;">Skills</h2>
-<canvas id="skillsPie" style="max-width:600px; margin:0 auto;"></canvas>
+  <h2 style="font-size:2.5rem; margin-bottom:40px;">Skills</h2>
+  <canvas id="skillsPie" style="max-width:600px; margin:0 auto;"></canvas>
 </section>
 
-<!-- Portfolio Images Section -->
+<!-- Portfolio -->
 <section id="portfolio-images" style="padding:60px 20px; background:#fff; text-align:center;">
-<h2 style="font-size:2.5rem; margin-bottom:40px;">Portfolio Images</h2>
-<div class="slideshow-container">
-<div class="slides fade">
-<img src="image.jpeg" alt="Graduation Picture">
-<div class="caption">Graduation</div>
-</div>
-<div class="slides fade">
-<img src="image2.png" alt="Scholarship">
-<div class="caption">$50,000 Scholarship</div>
-</div>
-<div class="slides fade">
-<img src="image3.png" alt="Mitacs GRI">
-<div class="caption">Mitacs GRI</div>
-</div>
-</div>
+  <h2 style="font-size:2.5rem; margin-bottom:40px;">Portfolio Images</h2>
+  <div class="slideshow-container">
+    <div class="slides fade">
+      <img src="image.jpeg" alt="Graduation Picture">
+      <div class="caption">Graduation</div>
+    </div>
+    <div class="slides fade">
+      <img src="image2.png" alt="Scholarship">
+      <div class="caption">$50,000 Scholarship</div>
+    </div>
+    <div class="slides fade">
+      <img src="image3.png" alt="Mitacs GRI">
+      <div class="caption">Mitacs GRI</div>
+    </div>
+  </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact" class="contact-section">
-<h2>Contact</h2>
-<p>Email: lakchchayam.khare@gmail.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/lakchchayam/" target="_blank">Profile</a></p>
+  <h2>Contact</h2>
+  <p>Email: lakchchayam.khare@gmail.com</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/lakchchayam/" target="_blank">Profile</a></p>
 </section>
 
 <!-- Scripts -->
@@ -345,16 +233,16 @@ const skillsPie = new Chart(ctx, {
     options: {responsive:true, plugins:{legend:{position:'bottom'}}}
 });
 
-// Slideshow Script
+// Slideshow
 let slideIndex = 0;
 showSlides();
 function showSlides() {
-let slides = document.getElementsByClassName("slides");
-for (let i=0;i<slides.length;i++){slides[i].style.display="none";}
-slideIndex++;
-if(slideIndex>slides.length){slideIndex=1;}
-slides[slideIndex-1].style.display="block";
-setTimeout(showSlides,3000);
+  let slides = document.getElementsByClassName("slides");
+  for (let i=0;i<slides.length;i++){slides[i].style.display="none";}
+  slideIndex++;
+  if(slideIndex>slides.length){slideIndex=1;}
+  slides[slideIndex-1].style.display="block";
+  setTimeout(showSlides,3000);
 }
 </script>
 
