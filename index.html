@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Portfolio</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="https://github.com/lakchchayam" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="avatar-large">
+          <img src="./1737136404033.jpeg" alt="Profile photo of Lakchchayam Divya Khare">
+        </div>
+        <h1 class="hero-name">Lakchchayam Divya Khare</h1>
+        <p class="hero-role">Data Scientist & Machine Learning Engineer</p>
+        <p class="hero-meta">Canada · +1 (647) 581-7542 · <a href="mailto:lakchchayam.khare@gmail.com">lakchchayam.khare@gmail.com</a></p>
+        <div class="hero-links">
+          <a href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/lakchchayam" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section summary">
+      <div class="container">
+        <p>
+          Hi! Welcome to my portfolio.
+        </p>
+        <p>
+          I am a Data Scientist and Machine Learning Engineer with experience in statistical modeling, SQL-based data preparation, forecasting, and dashboard development. I specialize in cleaning, validating, and transforming complex multi-source datasets to support predictive modeling, operational reporting, and research collaboration—communicating technical insights in plain language for stakeholders.
+        </p>
+        <p>
+          Explore my work below, or connect with me on <a href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer">LinkedIn</a> and <a href="https://github.com/lakchchayam" target="_blank" rel="noreferrer">GitHub</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Projects</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <img class="project-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="RAG system illustration">
+            <h3>RAG Customer Support Platform</h3>
+            <p>Production-grade Retrieval-Augmented Generation stack for enterprise FAQs with vector search, guardrails, and observability to reduce hallucinations.</p>
+            <p class="tech">Tech: Llama 3 · LangChain · Qdrant · FastAPI · OpenTelemetry</p>
+            <div class="card-actions">
+              <a href="#" class="btn outline small">View Code</a>
+              <a href="#" class="btn primary small">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80" alt="Vision-language search">
+            <h3>Multimodal Vision-Language Search</h3>
+            <p>CLIP-powered semantic search for images + text with re-ranking and caching to serve sub-200ms queries over millions of assets.</p>
+            <p class="tech">Tech: CLIP · Faiss · Redis · Next.js · Vercel Edge</p>
+            <div class="card-actions">
+              <a href="#" class="btn outline small">View Code</a>
+              <a href="#" class="btn primary small">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Agentic workflows">
+            <h3>LLM Agentic Workflow Orchestrator</h3>
+            <p>Tool-using agents with planning/execution, function calling, and tracing for data enrichment and report generation pipelines.</p>
+            <p class="tech">Tech: OpenAI Functions · LangGraph · Celery · Postgres · Prometheus</p>
+            <div class="card-actions">
+              <a href="#" class="btn outline small">View Code</a>
+              <a href="#" class="btn primary small">Live Demo</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Forecasting dashboard">
+            <h3>Time-Series Forecasting Suite</h3>
+            <p>Transformer-based forecasting service with feature stores, drift alerts, and CI-driven backtesting for revenue and demand signals.</p>
+            <p class="tech">Tech: PyTorch · Temporal Fusion Transformer · Feast · Airflow · Grafana</p>
+            <div class="card-actions">
+              <a href="#" class="btn outline small">View Code</a>
+              <a href="#" class="btn primary small">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-block">
+            <h3>Programming Skills</h3>
+            <div class="icon-row">
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/python--v1.png" alt="Python icon"><span>Python</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/sql.png" alt="SQL icon"><span>SQL</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/r-project.png" alt="R icon"><span>R</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/table.png" alt="Pandas icon"><span>Pandas</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/statistics.png" alt="NumPy icon"><span>NumPy</span></div>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h3>Tools & Frameworks</h3>
+            <div class="icon-row">
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="PyTorch icon"><span>PyTorch</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/tensorflow.png" alt="TensorFlow icon"><span>TensorFlow</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/neural-network.png" alt="Scikit-learn icon"><span>Scikit-learn</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/link--v1.png" alt="LangChain icon"><span>LangChain</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/workflow.png" alt="MLflow icon"><span>MLflow</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/api.png" alt="FastAPI icon"><span>FastAPI</span></div>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h3>Cloud Platforms</h3>
+            <div class="icon-row">
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/azure-1.png" alt="Azure icon"><span>Azure</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS icon"><span>AWS</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/google-cloud.png" alt="GCP icon"><span>GCP</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/apache-spark.png" alt="Databricks icon"><span>Databricks</span></div>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h3>Databases</h3>
+            <div class="icon-row">
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/postgreesql.png" alt="PostgreSQL icon"><span>PostgreSQL</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/mongodb.png" alt="MongoDB icon"><span>MongoDB</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/mysql-logo.png" alt="MySQL icon"><span>MySQL</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/database-export.png" alt="Chroma icon"><span>Chroma</span></div>
+              <div class="icon-cell"><img src="https://img.icons8.com/color/48/database-restore.png" alt="Qdrant icon"><span>Qdrant</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section contact-lite">
+      <div class="container">
+        <div class="section-header">
+          <h2>Experience</h2>
+        </div>
+        <div class="accordion">
+          <button class="accordion-item" data-target="exp2">
+            <div class="acc-left">
+              <img src="./lushio.png" alt="Lushio Fitness logo" class="acc-logo">
+              <div>
+                <div class="acc-role">Data Analyst — Behavioral Insights & Automation</div>
+                <div class="acc-org">Lushio Fitness · Oct 2024 – Oct 2025</div>
+              </div>
+            </div>
+            <span class="acc-icon">▾</span>
+          </button>
+          <div class="acc-panel" id="exp2">
+            <ul>
+              <li>Designed and maintained dashboards to monitor behavioral and operational trends for non-technical stakeholders.</li>
+              <li>Built SQL pipelines for cleaning, validating, and transforming high-volume datasets supporting forecasting and reporting.</li>
+              <li>Developed Python automations cutting manual reporting effort by 35% and improved documentation for governance.</li>
+            </ul>
+          </div>
+
+          <button class="accordion-item" data-target="exp3">
+            <div class="acc-left">
+              <img src="./western.png" alt="Western University logo" class="acc-logo">
+              <div>
+                <div class="acc-role">Research Assistant — ML & Data Analytics</div>
+                <div class="acc-org">University of Western Ontario · Sept 2022 – Oct 2024</div>
+              </div>
+            </div>
+            <span class="acc-icon">▾</span>
+          </button>
+          <div class="acc-panel" id="exp3">
+            <ul>
+              <li>Performed exploratory analysis and predictive modeling to identify behavioral patterns across large datasets.</li>
+              <li>Cleaned and transformed heterogeneous data to support reproducible research workflows and modeling.</li>
+              <li>Translated analytical findings into clear, actionable insights for faculty and research teams.</li>
+            </ul>
+          </div>
+
+          <button class="accordion-item" data-target="exp4">
+            <div class="acc-left">
+              <img src="./sherbrooke.png" alt="Mitacs logo" class="acc-logo">
+              <div>
+                <div class="acc-role">Data Analyst Intern — Insights & Automation</div>
+                <div class="acc-org">Mitacs — Université de Sherbrooke · May 2021 – Aug 2021</div>
+              </div>
+            </div>
+            <span class="acc-icon">▾</span>
+          </button>
+          <div class="acc-panel" id="exp4">
+            <ul>
+              <li>Automated Python and SQL ETL pipelines processing 8M+ records, improving refresh reliability by 50%.</li>
+              <li>Built KPI dashboards and analytical summaries that increased visibility into program trends.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section contact-lite">
+      <div class="container">
+        <div class="section-header">
+          <h2>Education</h2>
+        </div>
+        <div class="edu-card">
+          <div class="edu-left">
+            <img src="./western.png" alt="Western University logo" class="acc-logo">
+            <div>
+              <div class="acc-role">MSc Computer Science — Machine Learning & Data Analytics</div>
+              <div class="acc-org">University of Western Ontario · 2022 – 2024</div>
+              <a class="text-link" href="https://hdl.handle.net/20.500.14721/27606" target="_blank" rel="noreferrer">Thesis: Security and Integration in Business Intelligence Tools</a>
+            </div>
+          </div>
+          <ul class="edu-list">
+            <li>Focused on ML, data analytics, and reproducible research workflows.</li>
+            <li>Emphasized data quality, validation, and secure access control for BI tools.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Research</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <img class="project-thumb" src="./western.png" alt="Western University logo">
+            <h3>Security and Integration in BI Tools</h3>
+            <p>User-centered evaluation of BI platforms with emphasis on access control, data security, and governance in dynamic environments.</p>
+            <p class="tech">Focus: BI Security · Access Control · Governance</p>
+            <div class="card-actions">
+              <a href="https://hdl.handle.net/20.500.14721/27606" class="btn primary small" target="_blank" rel="noreferrer">Read Thesis</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="./sherbrooke.png" alt="Mitacs project logo">
+            <h3>Mitacs Project — Systematic Analysis</h3>
+            <p>Data science workflow for competitive intelligence: big data ingestion, NLP/text mining, network analysis, and insight visualization.</p>
+            <p class="tech">NLP · Text Mining · Network Analysis · Data Pipelines</p>
+            <div class="card-actions">
+              <a href="https://github.com/lakchchayam/Mitacs-Project" class="btn outline small" target="_blank" rel="noreferrer">View Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Feel free to reach out to me.</p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <span>© <span id="year"></span> Lakchchayam Divya Khare</span>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
