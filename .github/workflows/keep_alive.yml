@@ -1,0 +1,22 @@
+name: Keep Apps Alive (Business Hours)
+
+on:
+  schedule:
+    # Run every 14 minutes (render sleeps after 15)
+    # Hours: 14:00 UTC to 23:00 UTC (Approx 9 AM - 6 PM EST)
+    # Days: Monday (1) to Friday (5)
+    - cron: '*/14 14-23 * * 1-5'
+  workflow_dispatch: # Allows manual triggering for testing
+
+jobs:
+  ping_apps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake Up Fraud Detection App
+        run: curl -I https://fraudetection-qppk.onrender.com/dashboard
+        
+      - name: Wake Up RAG Chatbot
+        run: curl -I https://rag-chatbot-c7lo.onrender.com
+        
+      - name: Wake Up Churn Prediction App
+        run: curl -I https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app
