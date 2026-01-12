@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+  if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     updateIcon(true);
   }
