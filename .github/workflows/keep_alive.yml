@@ -3,9 +3,11 @@ name: Keep Apps Alive (Business Hours)
 on:
   schedule:
     # Run every 14 minutes (render sleeps after 15)
-    # Hours: 14:00 UTC to 23:00 UTC (Approx 9 AM - 6 PM EST)
+    # Hours: 13:00 UTC to 22:00 UTC (Approx 8 AM - 5 PM EST)
     # Days: Monday (1) to Friday (5)
-    - cron: '*/14 14-23 * * 1-5'
+    # Total Usage: ~9 hours/day * 5 days * 4 weeks * 2 apps = ~360 hours/month
+    # (Leaving ~390 hours free for a 3rd app or manual testing)
+    - cron: '*/14 13-22 * * 1-5'
   workflow_dispatch: # Allows manual triggering for testing
 
 jobs:
@@ -13,10 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wake Up Fraud Detection App
-        run: curl -I https://fraudetection-qppk.onrender.com/dashboard
+        run: |
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://fraudetection-qppk.onrender.com/dashboard || echo "First attempt failed/timed out, retrying..."
+          sleep 5
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://fraudetection-qppk.onrender.com/dashboard
         
       - name: Wake Up RAG Chatbot
-        run: curl -I https://rag-chatbot-c7lo.onrender.com
+        run: |
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://rag-chatbot-c7lo.onrender.com || echo "First attempt failed/timed out, retrying..."
+          sleep 5
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://rag-chatbot-c7lo.onrender.com
         
       - name: Wake Up Churn Prediction App
-        run: curl -I https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app
+        run: |
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app || echo "First attempt failed/timed out, retrying..."
+          sleep 5
+          curl -L --fail --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app
