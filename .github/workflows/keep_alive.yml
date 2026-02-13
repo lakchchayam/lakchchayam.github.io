@@ -14,20 +14,8 @@ jobs:
   ping_apps:
     runs-on: ubuntu-latest
     steps:
-      - name: Wake Up Fraud Detection App
-        run: |
-          curl -L --fail --max-time 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://fraudetection-qppk.onrender.com/dashboard || echo "First attempt failed/timed out, retrying..."
-          sleep 10
-          curl -L --fail --max-time 120 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://fraudetection-qppk.onrender.com/dashboard
-        
       - name: Wake Up RAG Chatbot
         run: |
           curl -L --fail --max-time 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://rag-chatbot-c7lo.onrender.com || echo "First attempt failed/timed out, retrying..."
           sleep 10
           curl -L --fail --max-time 120 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://rag-chatbot-c7lo.onrender.com
-        
-      - name: Wake Up Churn Prediction App
-        run: |
-          curl --fail --max-time 60 -c cookies.txt -b cookies.txt -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app || echo "First attempt failed/timed out, retrying..."
-          sleep 10
-          curl --fail --max-time 60 -c cookies.txt -b cookies.txt -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://churnapp-6myusxqkgnnpq7ukvojje4.streamlit.app
