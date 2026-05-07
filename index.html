@@ -23,31 +23,34 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="mask-icon" href="favicon.svg" color="#1c1917">
   <link rel="apple-touch-icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=roman_achievements">
+  <link rel="stylesheet" href="styles.css?v=landing_mockup">
 </head>
 
 <body>
   <header class="navbar">
     <div class="container nav-content">
-      <div class="logo">Portfolio</div>
+      <div class="logo">Lakchchayam <span class="brand-dot">•</span></div>
       <nav class="nav-links" id="nav-links">
         <a href="#home">Home</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-icons">
+        <a class="nav-icon-link" href="https://github.com/lakchchayam" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2.2 3.4 1.6.1-.7.4-1.2.7-1.5-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.8 5.5-5.4 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .8Z"></path></svg>
+        </a>
+        <a class="nav-icon-link" href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM.5 8.3h4.9v15.2H.5V8.3Zm8.1 0h4.7v2.1h.1c.7-1.3 2.3-2.7 4.7-2.7 5 0 5.9 3.3 5.9 7.5v8.3h-4.9v-7.4c0-1.8 0-4-2.5-4s-2.8 1.9-2.8 3.9v7.5H8.6V8.3Z"></path></svg>
+        </a>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
           <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <a href="https://github.com/lakchchayam" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span>
@@ -59,37 +62,84 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="container hero-inner">
-        <!-- LEFT COLUMN: Profile -->
-        <div class="hero-left">
-          <div class="avatar-large">
-            <img src="./1737136404033.jpeg" alt="Profile photo of Lakchchayam Divya Khare">
+      <div class="container hero-shell">
+        <div class="hero-copy-panel">
+          <div class="hero-pill">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 14.8 9.2 22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8L12 2Z"></path><path d="M19 2v4M17 4h4"></path></svg>
+            <span>AI Engineer</span>
+            <span class="pill-dot">•</span>
+            <span>Research Assistant</span>
           </div>
-          <h1 class="hero-name">Lakchchayam Divya Khare</h1>
-          <p class="hero-role">Data Scientist & Machine Learning Engineer</p>
-          <p class="hero-meta">Canada · +1 (647) 581-7542 · <a
-              href="mailto:lakchchayam.khare@gmail.com">lakchchayam.khare@gmail.com</a></p>
-          <div class="hero-links">
-            <a href="https://linkedin.com/in/lakshyamkhare" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/lakchchayam" target="_blank" rel="noreferrer">GitHub</a>
+          <h1 class="hero-title">Building AI Systems<br>That <em>Scale.</em></h1>
+          <p class="hero-subtitle">
+            AI Engineer and Research Assistant building intelligent systems with LLMs,
+            retrieval pipelines, and scalable ML infrastructure. Focused on agentic AI,
+            search relevance, and production-ready machine learning applications.
+          </p>
+          <div class="hero-actions">
+            <a class="hero-button hero-button-primary" href="#projects">View Projects
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+            </a>
+            <a class="hero-button hero-button-secondary" href="./Lakchchayam_Khare_Resume.pdf" target="_blank" rel="noreferrer">Download Resume
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+            </a>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: Bio / "Hi Welcome" -->
-        <div class="hero-right">
-          <p>
-            Hi! Welcome to my portfolio.
-          </p>
-          <p>
-            I am a Data Scientist and Machine Learning Engineer with experience in statistical modeling, SQL-based data
-            preparation, forecasting, and dashboard development.
-          </p>
-          <p>
-            I specialize in cleaning, validating, and transforming complex multi-source datasets to support predictive
-            modeling, operational reporting, and research collaboration—communicating technical insights in plain
-            language for stakeholders.
-          </p>
+        <div class="hero-visual-panel">
+          <div class="hero-photo-frame">
+            <img src="./1737136404033.jpeg" alt="Profile photo of Lakchchayam Divya Khare">
+          </div>
+          <div class="degree-card">
+            <span class="degree-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"></path></svg>
+            </span>
+            <div>
+              <strong>MSc Computer Science</strong>
+              <span>Western University</span>
+            </div>
+          </div>
         </div>
+
+        <div class="hero-metrics">
+          <div class="metric-tile">
+            <span class="metric-icon metric-icon-gray">
+              <svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"></path></svg>
+            </span>
+            <div><span>Scholarship Funding</span><strong>$50,725</strong><p>Over 16 months</p></div>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-icon metric-icon-green">
+              <svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M9 7V4h6v3"></path><path d="M4 12h16"></path></svg>
+            </span>
+            <div><span>Role</span><strong>AI Engineer</strong><p>Research Assistant</p></div>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-icon metric-icon-purple">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5V5.8A2.8 2.8 0 0 1 6.8 3H20v17H6.8A2.8 2.8 0 0 0 4 22.8"></path><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path></svg>
+            </span>
+            <div><span>Degree</span><strong>MSc Computer Science</strong><p>Western University</p></div>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-icon metric-icon-gold">
+              <svg viewBox="0 0 24 24"><path d="M12 2 14.8 9.2 22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8L12 2Z"></path><path d="M19 2v4M17 4h4"></path></svg>
+            </span>
+            <div><span>Focus Areas</span><strong>LLMs • Search • Data Systems</strong><p>ML Engineering • AI Applications</p></div>
+          </div>
+        </div>
+
+        <article class="hero-scholarship-card">
+          <div class="award-mark" aria-hidden="true">
+            <span>♛</span>
+          </div>
+          <div class="award-copy">
+            <h2>Globalinks Scholarship</h2>
+            <p>Awarded a financial support package of <strong>$50,725 over 16 months</strong> towards MSc in Computer Science at The University of Western Ontario.</p>
+          </div>
+          <a class="hero-button hero-button-secondary award-button" href="#achievements">View Scholarship
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </article>
       </div>
     </section>
 
