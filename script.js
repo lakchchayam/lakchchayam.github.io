@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, observerOptions);
 
-  const elementsToAnimate = document.querySelectorAll(".hero-inner, .section-header, .project-card, .skill-block, .accordion-item, .contact-form");
+  const elementsToAnimate = document.querySelectorAll(".hero-inner, .section-header, .exp-card, .project-card, .scholar-card, .skill-block, .contact-form");
 
   elementsToAnimate.forEach((el) => {
     el.classList.add("animate-entrance"); // Set initial invisible state

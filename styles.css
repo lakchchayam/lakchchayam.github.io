@@ -6,8 +6,8 @@
   /* Soft Black */
   --muted: #86868b;
   /* Apple Muted Gray */
-  --accent: #0071e3;
-  /* Apple Blue */
+  --accent: #4f2683;
+  /* Western Purple */
   --card: #ffffff;
   /* Pure White */
   --border: #d2d2d7;
@@ -22,8 +22,8 @@ body.dark-mode {
   /* Cream/Off-white */
   --muted: #a8a29e;
   /* Warm Gray */
-  --accent: #da7756;
-  /* Rust/Orange Accent for Dark Mode warmth */
+  --accent: #b79cff;
+  /* Soft Purple Accent */
   --card: #292524;
   /* Darker Charcoal Card */
   --border: #44403c;
@@ -76,18 +76,18 @@ body.dark-mode {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
 }
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Headings with Newsreader Serif */
 h1,
 h2,
 h3,
@@ -96,10 +96,10 @@ h5,
 h6,
 .logo,
 .hero-name {
-  font-family: "Newsreader", serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: #1d1d1f;
+  color: var(--text);
 }
 
 a {
@@ -154,7 +154,7 @@ img {
 }
 
 .nav-links a {
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   color: var(--muted);
   /* Was #d6dce2, now muted gray */
@@ -210,23 +210,40 @@ img {
 
 /* Hero - Adapted to Light Theme */
 .hero {
-  background: var(--bg);
-  /* Was #1f272c */
+  background:
+    linear-gradient(180deg, rgba(79, 38, 131, 0.06), rgba(245, 245, 247, 0)),
+    var(--bg);
   color: var(--text);
   text-align: center;
-  padding: 6rem 0 5rem;
-  /* Slightly more padding for airy feel */
+  padding: 4.5rem 0 3.5rem;
 }
 
 .hero-inner {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   align-items: center;
   gap: 4rem;
   text-align: left;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: var(--card);
+  border: 1px solid rgba(79, 38, 131, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(30, 24, 42, 0.08);
+}
+
+.hero-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 8px;
+  background: #4f2683;
 }
 
 .hero-left {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -234,6 +251,8 @@ img {
 }
 
 .hero-right {
+  position: relative;
+  z-index: 1;
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.7;
@@ -276,7 +295,7 @@ img {
   margin: 0;
   color: var(--muted);
   font-weight: 400;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
 }
 
@@ -301,7 +320,6 @@ img {
 
 .hero-links a {
   color: var(--accent);
-  /* Apple Blue */
   font-weight: 600;
   border-bottom: 1px solid transparent;
   /* Removed dashed, cleaner */
@@ -311,9 +329,20 @@ img {
   border-bottom-color: var(--accent);
 }
 
+.home-rule {
+  width: min(860px, calc(100% - 40px));
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, #4f2683, transparent);
+}
+
 /* Sections - Original Layout Preserved */
 .section {
   padding: 4rem 0;
+}
+
+main > section {
+  scroll-margin-top: 76px;
 }
 
 .section-header h2 {
@@ -378,8 +407,7 @@ img {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   /* Soft shadow */
-  border-color: rgba(0, 113, 227, 0.2);
-  /* Subtle blue border on hover */
+  border-color: rgba(79, 38, 131, 0.24);
 }
 
 .project-card h3 {
@@ -416,6 +444,12 @@ img {
   gap: 0.6rem;
   flex-wrap: wrap;
   margin-top: 0.4rem;
+}
+
+.project-card-feature .project-thumb {
+  object-fit: contain;
+  padding: 28px;
+  background: #ffffff;
 }
 
 .skills {
@@ -496,7 +530,7 @@ img {
 }
 
 .exp-section {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   padding: 80px 20px;
   background: #f4f4f8;
   border-top: 1px solid var(--border);
@@ -504,7 +538,7 @@ img {
 
 .exp-section h2.section-heading {
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
   color: #1a1a2e;
   margin-bottom: 50px;
@@ -605,7 +639,7 @@ img {
 }
 
 .exp-role {
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: clamp(2rem, 5vw, 2.8rem);
   color: #1a1a2e;
   font-weight: 700;
@@ -709,7 +743,7 @@ img {
   gap: 10px;
   background: #2e2070;
   color: #fff;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 0.93rem;
   font-weight: 500;
   padding: 16px 40px;
@@ -731,6 +765,179 @@ img {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.achievements-section {
+  background:
+    linear-gradient(180deg, rgba(79, 38, 131, 0.05), transparent 42%),
+    var(--bg);
+}
+
+.scholarship-stack {
+  display: grid;
+  gap: 28px;
+  margin-top: 1.8rem;
+}
+
+.scholar-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 154px minmax(0, 1fr);
+  overflow: hidden;
+  min-height: 330px;
+  background: #fff;
+  border: 1px solid rgba(79, 38, 131, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(22, 18, 29, 0.08);
+}
+
+.scholar-ribbon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 54px;
+  background: #4f2683;
+}
+
+.scholar-ribbon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 77px solid transparent;
+  border-right: 77px solid transparent;
+  border-bottom: 54px solid #fff;
+}
+
+.scholar-ribbon img {
+  position: relative;
+  z-index: 1;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 999px;
+}
+
+.scholar-card-mitacs .scholar-ribbon {
+  background: #0067b1;
+}
+
+.scholar-card-mitacs .scholar-ribbon img {
+  width: 104px;
+  height: 76px;
+  border-radius: 12px;
+}
+
+.scholar-body {
+  padding: clamp(28px, 4vw, 52px) clamp(26px, 5vw, 62px);
+}
+
+.scholar-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #4f2683;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.scholar-kicker svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scholar-body h3 {
+  margin: 12px 0 8px;
+  color: #171421;
+  font-size: clamp(2.1rem, 5vw, 3.35rem);
+  line-height: 1.02;
+  font-weight: 700;
+}
+
+.scholar-underline {
+  width: 112px;
+  height: 4px;
+  margin: 0 0 36px;
+  background: #4f2683;
+}
+
+.scholar-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.95fr);
+  gap: clamp(28px, 5vw, 54px);
+  align-items: center;
+}
+
+.scholar-meta {
+  display: grid;
+  gap: 24px;
+}
+
+.scholar-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.scholar-row svg {
+  width: 30px;
+  height: 30px;
+  color: #6f7280;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scholar-row span,
+.scholar-amount span {
+  display: block;
+  color: #6f7280;
+  font-size: 1rem;
+}
+
+.scholar-row strong {
+  display: block;
+  color: #1d1d1f;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.scholar-amount {
+  min-height: 186px;
+  padding-left: clamp(26px, 5vw, 48px);
+  border-left: 1px solid rgba(79, 38, 131, 0.2);
+}
+
+.scholar-amount strong {
+  display: block;
+  margin: 8px 0 10px;
+  color: #4f2683;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.scholar-amount p {
+  margin: 0;
+  color: #34313f;
+  font-size: 1.12rem;
+  line-height: 1.5;
 }
 
 /* Accordion - Restored Original Logic */
@@ -777,7 +984,7 @@ img {
 .acc-role {
   font-weight: 600;
   color: var(--text);
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .acc-org {
@@ -865,7 +1072,7 @@ img {
 label {
   font-weight: 500;
   color: var(--text);
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 input,
@@ -903,7 +1110,7 @@ textarea {
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  font-family: "Inter", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .btn.primary {
@@ -996,6 +1203,32 @@ textarea {
   .hamburger {
     display: inline-flex;
   }
+
+  .scholar-card {
+    grid-template-columns: 1fr;
+  }
+
+  .scholar-ribbon {
+    min-height: 112px;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .scholar-ribbon::after {
+    display: none;
+  }
+
+  .scholar-details {
+    grid-template-columns: 1fr;
+  }
+
+  .scholar-amount {
+    min-height: auto;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(79, 38, 131, 0.2);
+    padding-top: 24px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1009,6 +1242,27 @@ textarea {
 
   .hero {
     padding: 3.5rem 0 4rem;
+  }
+
+  .hero-inner {
+    padding: 2rem 1.25rem;
+  }
+
+  .scholar-body {
+    padding: 26px 22px 30px;
+  }
+
+  .scholar-body h3 {
+    font-size: 2rem;
+  }
+
+  .scholar-kicker {
+    letter-spacing: 0.14em;
+  }
+
+  .scholar-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 14px;
   }
 
   .exp-card {
