@@ -495,6 +495,244 @@ img {
   border-top: 1px solid var(--border);
 }
 
+.exp-section {
+  font-family: "DM Sans", sans-serif;
+  padding: 80px 20px;
+  background: #f4f4f8;
+  border-top: 1px solid var(--border);
+}
+
+.exp-section h2.section-heading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.exp-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exp-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 44px 44px;
+  border: 1px solid #ede9ff;
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.exp-logo-left,
+.exp-logo-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-logo-right {
+  justify-content: flex-end;
+}
+
+.exp-logo-img {
+  display: block;
+  object-fit: contain;
+}
+
+.exp-logo-img-square {
+  width: 36px;
+  height: 36px;
+}
+
+.exp-logo-img-western {
+  width: min(160px, 34vw);
+  max-height: 48px;
+}
+
+.exp-logo-img-wide {
+  width: min(160px, 34vw);
+  max-height: 38px;
+}
+
+.exp-logo-img-sherbrooke {
+  width: min(170px, 36vw);
+  height: 44px;
+}
+
+.exp-logo-word {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 0.06em;
+}
+
+.exp-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5a4fcf;
+  background: #ede9ff;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.exp-card-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5a4fcf;
+  margin-bottom: 18px;
+}
+
+.exp-title-block {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.exp-role {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #1a1a2e;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+
+.exp-role-sub {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 14px;
+}
+
+.exp-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.exp-divider::before,
+.exp-divider::after {
+  content: "";
+  width: 55px;
+  height: 1px;
+  background: #d4cff0;
+}
+
+.exp-divider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5a4fcf;
+}
+
+.exp-org-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  margin-bottom: 24px;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.exp-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.exp-bullet-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: #f0eeff;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-bullet-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #5a4fcf;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.exp-bullet-text {
+  font-size: 0.93rem;
+  color: #3a3a5a;
+  line-height: 1.65;
+  padding-top: 6px;
+  margin: 0;
+}
+
+.exp-bullet-text strong {
+  color: #1a1a2e;
+}
+
+.exp-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.exp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2e2070;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.93rem;
+  font-weight: 500;
+  padding: 16px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.exp-btn:hover {
+  background: #3d2b9e;
+  transform: translateY(-2px);
+}
+
+.exp-btn svg {
+  width: 17px;
+  height: 17px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Accordion - Restored Original Logic */
 .accordion {
   display: flex;
@@ -771,6 +1009,37 @@ textarea {
 
   .hero {
     padding: 3.5rem 0 4rem;
+  }
+
+  .exp-card {
+    padding: 28px 20px 32px;
+  }
+
+  .exp-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .exp-logo-right {
+    justify-content: flex-start;
+  }
+
+  .exp-logo-img-wide,
+  .exp-logo-img-sherbrooke {
+    width: min(168px, 78vw);
+  }
+
+  .exp-role {
+    font-size: 1.8rem;
+  }
+
+  .exp-bullet {
+    gap: 14px;
+  }
+
+  .exp-bullet-icon {
+    width: 44px;
+    height: 44px;
   }
 
   .footer-content {
