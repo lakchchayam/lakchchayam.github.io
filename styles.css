@@ -1392,6 +1392,43 @@ body {
   background: #ffffff;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#home {
+  order: 1;
+}
+
+.home-rule {
+  order: 2;
+}
+
+#experience {
+  order: 3;
+}
+
+#achievements {
+  order: 4;
+}
+
+#projects {
+  order: 5;
+}
+
+#education {
+  order: 6;
+}
+
+#skills {
+  order: 7;
+}
+
+#contact {
+  order: 8;
+}
+
 .container {
   max-width: 1380px;
 }
